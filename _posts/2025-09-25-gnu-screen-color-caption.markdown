@@ -5,14 +5,20 @@ date:   2025-09-25 22:25:03 +0800
 categories: github-page
 ---
 
-我在Linux中没有遇到这个问题，可能是OS的区别，或者screen的区别？在MacOS中，
+我在Linux中没有遇到这个问题，可能是OS的区别，或者screen 版本的区别？在MacOS中，
+用brew 安装 screen
+
+```
+brew install screen
+```
+
+在 ~/.screenrc 中:
+
 ```
 caption always "%{.bW}%-w%45>%{.rY}%n %t%{-}%+w %-0<"
 ```
 
-`%{.bW} %{.rY}` 这两处配置的颜色 bwry（蓝白红黄）会失效
-
-需要改成数字  %{.15;25} %{.3;1}
+`%{.bW} %{.rY}` 这两处配置的颜色 bwry（蓝白红黄）会失效, 需要改成数字 `%{.15;25} %{.3;1}`
 
 
 完整的 .screenrc
